@@ -1,87 +1,133 @@
-html
+:root
 {
-    text-align: center;
-    font-size: 16px;
-    background-image: url(./images/pattern-background-desktop.svg);
-    font-family: 'Montserrat', sans-serif;
-    
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+body
+{
+    font-family: 'Red Hat Display', sans-serif;
+    margin: 0;
+    background-image: url("./images/pattern-background-desktop.svg");
 }
 section
 {
-    width: 100%;
     display: flex;
     justify-content: center;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
     
 }
 .card
 {
-    background-color: blue;
-    width: 390px;
-    height: 570px;
-    margin: 50px;
-    border-radius: 20px;
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: auto 1fr;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 16px;
+    width: 430px;
+    height: 650px;
     overflow: hidden;
-    
 }
-#illustration-hero
+.information
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 0.20fr 0.15fr 0.25fr 0.25fr 0.25fr;
+    background-color: white;
+}
+.illustration-hero
 {
     width: 100%;
 }
-#information
+.title
 {
-    background-color: white;
-}
-#summary
-{
-    margin-top: 40px;
     font-weight: 900;
-   /* margin-bottom: 10px;*/
-
+    color: var(--dark-blue);
+    margin-top: 16px;
+    margin-bottom: 0;
 }
-#information:nth-child(2)
+.text-description
 {
+    margin-left: 32px;
+    margin-right: 32px;
+    text-align: center;
     font-weight: 500;
+    color: var(--desaturated-blue);
+    margin-bottom: 20px;
+    margin-top: 16px;
 }
-#annual-plan
+.annual-plan
 {
-    width: 300px;
-    height: 90px;
-    border-radius: 10px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 10px;
-    background-color: blue;
+    background-color: var(--very-pale-blue);
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-}
-
-#annual-plan img
-{
-    width: 40px;
-    height: 40px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-}
-#annual-plan img p
-{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 0px; /*revisar*/
+    grid-template-columns: auto 2fr 1fr;
+    border-radius: 8px;
+    margin-top: 0;
+    margin-bottom: 36px;
+    width: 350px;
+    height: 80px;
     
 }
-#annual-plan img p a
+.icon-music
 {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+}
+.value
+{
+    margin-left: 20px;
+    display: grid;
+    grid-template-rows: auto auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.value span
+{
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+#price
+{
+    font-weight: 500;
+    color: var(--desaturated-blue);
+}
+.change
+{
+    font-weight: 700;
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
 }
 button
 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 300px;
-    height: 30px;
-    border-radius: 5px;
+    width: 350px;
+    height: 40px;
+    border: 0;
+    border-radius: 8px;
+    background-color: purple;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+}
+.cancel-order
+{
+    text-decoration: none;
+    color: var(--desaturated-blue);
+    font-weight: 700;
+    margin-top: 40px;
+}
+@media (max-width:375px)
+{
+    section /*preguntar*/
+    {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }
